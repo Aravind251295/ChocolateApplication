@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function myfunction(){
+var unit= document.getElementById("units").value;
+window.alert(unit*3);
+}
+</script>
+
+<form >
+<h1 text-align="center">Electricity Consumer Form</h1><br>
+<br>
+Consumer No: <input type="number" minlength="8" id="no" maxlength="8"  required/>
+<br><br>Consumer Name: <input type="text" onkeypress="return /[a-z]/i.test(event.key)"  minlength="3" autocapitalize="on" minlength="3" id="name" required/>
+<br><br>Email Address:<input type="email" id="email" required/>
+<br><br>Number of Units: <input type="number"  min=0 id="units" required/>
+<br><Br><input type="submit" value="Calculate Electricity Charges and Display"  onclick="myfunction()"/>
+</form>
+</body></html>

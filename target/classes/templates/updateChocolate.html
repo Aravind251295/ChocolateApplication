@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.com/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="http://localhost:9090/display">Display Chocolates</a></li>
+  <li><a href="http://localhost:9090/add">Add Chocolates</a></li>
+  <li><a href="http://localhost:9090/update">Update Chocolates</a></li>
+  <li><a href="http://localhost:9090/delete">Delete Chocolates</a></li>
+</ul>
+<form th:action=@{/updateChocolate} th:object="${Chocolate}" >
+<div th:object="${Ch}">
+			<br> <input type="hidden" th:value="${Ch.id}" th:field=*{id}/>
+			<br> Update Chocolate Name :<input onkeypress="return /[a-z]/i.test(event.key)" type="text" th:value="${Ch.name}" th:field=*{name}/><br>
+			<br> Update Chocolate Rupee :<input type="number" min=0 th:value="${Ch.rupee}" 
+				th:field=*{rupee} /><br> <br> <input type="submit"
+				value="save" />&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset"
+				value="Reset" /> <br> <br>
+				</div>
+		</form>
+		
+</body>
+</html>
