@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://thymeleaf.com/">
 <head>
-<style>
+  <script>
+        var url = window.location.origin;
+    </script>
+  <style>
 ul {
   list-style-type: none;
   margin: 0;
@@ -29,10 +32,10 @@ li a:hover {
 </head>
 <body>
 <ul>
-  <li><a class="active" href="http://localhost:9090/display">Display Chocolates</a></li>
-  <li><a href="http://localhost:9090/add">Add Chocolates</a></li>
-  <li><a href="http://localhost:9090/update">Update Chocolates</a></li>
-  <li><a href="http://localhost:9090/delete">Delete Chocolates</a></li>
+  <li><a class="active" onclick="location.href=url+'/display'">Display Chocolates</a></li>
+  <li><a onclick="location.href=url+'/add'">Add Chocolates</a></li>
+  <li><a onclick="location.href=url+'/update'">Update Chocolates</a></li>
+  <li><a onclick="location.href=url+'/delete'">Delete Chocolates</a></li>
 </ul>
 <h1>Welcome Chocolate Factory!!!</h1>
 </body>
