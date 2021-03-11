@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.com/">
 <head>
-	<script>
-        var url = window.location.origin;
-    </script>
+
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style>
@@ -34,10 +32,10 @@ li a:hover {
 </head>
 <body>
 <ul>
-  <li><a class="active" onclick="location.href=url+'/display'">Display Chocolates</a></li>
-  <li><a onclick="location.href=url+'/add'">Add Chocolates</a></li>
-  <li><a onclick="location.href=url+'/update'">Update Chocolates</a></li>
-  <li><a onclick="location.href=url+'/delete'">Delete Chocolates</a></li>
+  <li><a class="active" href="display">Display Chocolates</a></li>
+  <li><a href="add">Add Chocolates</a></li>
+  <li><a href="update">Update Chocolates</a></li>
+  <li><a href="delete">Delete Chocolates</a></li>
 </ul>
 		<form th:action=@{/retrieveChocolate} th:object="${Chocolate}">
 			<label for="chocolate">Choose a Chocolate Id:</label> <select

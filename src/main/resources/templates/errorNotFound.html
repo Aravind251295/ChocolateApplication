@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://thymeleaf.com/">
 <head>
-  <script>
-        var url = window.location.origin;
-    </script>
+
 <style>
 ul {
   list-style-type: none;
@@ -33,10 +31,10 @@ li a:hover {
 <body>
 
 <ul>
-  <li><a class="active" onclick="location.href=url+'/display'">Display Chocolates</a></li>
-  <li><a onclick="location.href=url+'/add'">Add Chocolates</a></li>
-  <li><a onclick="location.href=url+'/update'">Update Chocolates</a></li>
-  <li><a onclick="location.href=url+'/delete'">Delete Chocolates</a></li>
+  <li><a class="active" href="display">Display Chocolates</a></li>
+  <li><a href="add">Add Chocolates</a></li>
+  <li><a href="update">Update Chocolates</a></li>
+  <li><a href="delete">Delete Chocolates</a></li>
 </ul>
 <div th:object="${xyz}">
 <h1>Error: Chocolate Not Found</h1>
