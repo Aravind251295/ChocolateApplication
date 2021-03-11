@@ -48,7 +48,8 @@ public class MyController {
 	public String deleteChoco(@PathVariable Integer id) throws ChocolateNotFoundException {
 		return service.deleteChocolate(id);
 	}
-	@GetMapping(value = "/home")
+
+	@GetMapping(value = "/")
 	public ModelAndView getHome() {
 		ModelAndView mav= new ModelAndView("home");
 		return mav;
